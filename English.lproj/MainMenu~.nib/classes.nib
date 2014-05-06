@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {deleteAllRecords = id; deleteRecord = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {checkForNewVersion = id; goToProductPage = id; sendFeedback = id; }; 
+            CLASS = GeneralController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

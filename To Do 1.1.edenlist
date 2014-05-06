@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Records</key>
+	<array>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Comments</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Add Help files</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Comments</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Save comments</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Comments</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Sort by column</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Comments</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Drag and drop rows</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<true/>
+			<key>Notes</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Update file icons</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Notes</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Update app icon</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Notes</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Add QuickLook support</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Notes</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Add Spotlight support</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<integer>0</integer>
+			<key>Notes</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>Clean up code</string>
+		</dict>
+	</array>
+	<key>Version</key>
+	<string>1.1.0</string>
+</dict>
+</plist>

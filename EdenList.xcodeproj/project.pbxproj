@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		2A37F4C6FDCFA73011CA2CEA /* EdenList */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = 84DF6B7908A6DC31001034E5 /* Build configuration list for PBXApplicationTarget "EdenList" */;
+			buildPhases = (
+				2A37F4C7FDCFA73011CA2CEA /* Headers */,
+				2A37F4C9FDCFA73011CA2CEA /* Resources */,
+				2A37F4CEFDCFA73011CA2CEA /* Sources */,
+				2A37F4D1FDCFA73011CA2CEA /* Frameworks */,
+			);
+			dependencies = (
+			);
+			name = EdenList;
+			productInstallPath = "$(HOME)/Applications";
+			productName = EdenList;
+			productReference = 1758732AFF379DA111CA2CBB /* EdenList.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>edenlist</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>DocumentType</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>edenlist</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>MyDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>EdenList</string>
+	<key>CFBundleGetInfoString</key>
+	<string>0.9</string>
+	<key>CFBundleIconFile</key>
+	<string>Edenlist</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.edenwaith.edenlist</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>EdenList</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.9</string>
+	<key>CFBundleSignature</key>
+	<string>edenlist</string>
+	<key>CFBundleVersion</key>
+	<string>2</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		080E96DAFE201CDB7F000001 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		080E96DBFE201CDB7F000001 /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */; };
+		089C1661FE840EACC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		1058C7A9FEA54F5311CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		2A37F4C8FDCFA73011CA2CEA /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */; };
+		2A37F4CFFDCFA73011CA2CEA /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		2A37F4D0FDCFA73011CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		32DBCF760370BD2300C91783 /* EdenList_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* EdenList_Prefix.h */; };
+		8430C6EF0C1BB0B70030ABEE /* ELTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8430C6ED0C1BB0B70030ABEE /* ELTableView.h */; };
+		8430C6F00C1BB0B70030ABEE /* ELTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C6EE0C1BB0B70030ABEE /* ELTableView.m */; };
+		8430C6F10C1BB0B70030ABEE /* ELTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8430C6ED0C1BB0B70030ABEE /* ELTableView.h */; };
+		8430C6F20C1BB0B70030ABEE /* ELTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C6EE0C1BB0B70030ABEE /* ELTableView.m */; };
+		844B2D160A143BBC0070BF31 /* GeneralController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844B2D140A143BBC0070BF31 /* GeneralController.h */; };
+		844B2D170A143BBC0070BF31 /* GeneralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B2D150A143BBC0070BF31 /* GeneralController.m */; };
+		84C40BBF0625D589000C5867 /* Edenlist.icns in Resources */ = {isa = PBXBuildFile; fileRef = 84C40BBE0625D589000C5867 /* Edenlist.icns */; };
+		84E7E9AE0A366A7600E5EE89 /* EdenList_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* EdenList_Prefix.h */; };
+		84E7E9AF0A366A7600E5EE89 /* MyDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */; };
+		84E7E9B10A366A7600E5EE89 /* GeneralController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844B2D140A143BBC0070BF31 /* GeneralController.h */; };
+		84E7E9B30A366A7600E5EE89 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		84E7E9B40A366A7600E5EE89 /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */; };
+		84E7E9B50A366A7600E5EE89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		84E7E9B60A366A7600E5EE89 /* Edenlist.icns in Resources */ = {isa = PBXBuildFile; fileRef = 84C40BBE0625D589000C5867 /* Edenlist.icns */; };
+		84E7E9B80A366A7600E5EE89 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		84E7E9B90A366A7600E5EE89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		84E7E9BB0A366A7600E5EE89 /* GeneralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B2D150A143BBC0070BF31 /* GeneralController.m */; };
+		84E7E9BD0A366A7600E5EE89 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		84E7E9D30A36702C00E5EE89 /* EdenList-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 84E7E9D20A36702C00E5EE89 /* EdenList-icon.icns */; };
+		84E7E9D40A36702C00E5EE89 /* EdenList-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 84E7E9D20A36702C00E5EE89 /* EdenList-icon.icns */; };
+		84FF04ED0BE53DC300A62D3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FF04EC0BE53DC300A62D3C /* Localizable.strings */; };
+		84FF04EE0BE53DC300A62D3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FF04EC0BE53DC300A62D3C /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1758732AFF379DA111CA2CBB /* EdenList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = EdenList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MyDocument.nib; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF750370BD2300C91783 /* EdenList_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdenList_Prefix.h; sourceTree = "<group>"; };
+		8430C6ED0C1BB0B70030ABEE /* ELTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ELTableView.h; sourceTree = "<group>"; };
+		8430C6EE0C1BB0B70030ABEE /* ELTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ELTableView.m; sourceTree = "<group>"; };
+		844B2D140A143BBC0070BF31 /* GeneralController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GeneralController.h; sourceTree = "<group>"; };
+		844B2D150A143BBC0070BF31 /* GeneralController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GeneralController.m; sourceTree = "<group>"; };
+		84C40BBE0625D589000C5867 /* Edenlist.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Edenlist.icns; sourceTree = "<group>"; };
+		84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-EdenList__Upgraded_.plist"; sourceTree = "<group>"; };
+		84E7E9C30A366A7600E5EE89 /* EdenList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdenList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E7E9D20A36702C00E5EE89 /* EdenList-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "EdenList-icon.icns"; sourceTree = "<group>"; };
+		84FF04E40BE53D9900A62D3C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A37F4D1FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A9FEA54F5311CA2CBB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E7E9BC0A366A7600E5EE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E7E9BD0A366A7600E5EE89 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1758732AFF379DA111CA2CBB /* EdenList.app */,
+				84E7E9C30A366A7600E5EE89 /* EdenList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* EdenList */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = EdenList;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8430C6ED0C1BB0B70030ABEE /* ELTableView.h */,
+				8430C6EE0C1BB0B70030ABEE /* ELTableView.m */,
+				844B2D140A143BBC0070BF31 /* GeneralController.h */,
+				844B2D150A143BBC0070BF31 /* GeneralController.m */,
+				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* EdenList_Prefix.h */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				84FF04EC0BE53DC300A62D3C /* Localizable.strings */,
+				84C40BBE0625D589000C5867 /* Edenlist.icns */,
+				84E7E9D20A36702C00E5EE89 /* EdenList-icon.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A37F4C7FDCFA73011CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32DBCF760370BD2300C91783 /* EdenList_Prefix.h in Headers */,
+				2A37F4C8FDCFA73011CA2CEA /* MyDocument.h in Headers */,
+				844B2D160A143BBC0070BF31 /* GeneralController.h in Headers */,
+				8430C6F10C1BB0B70030ABEE /* ELTableView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E7E9AD0A366A7600E5EE89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E7E9AE0A366A7600E5EE89 /* EdenList_Prefix.h in Headers */,
+				84E7E9AF0A366A7600E5EE89 /* MyDocument.h in Headers */,
+				84E7E9B10A366A7600E5EE89 /* GeneralController.h in Headers */,
+				8430C6EF0C1BB0B70030ABEE /* ELTableView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84E7E9AC0A366A7600E5EE89 /* EdenList (Upgraded) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84E7E9BE0A366A7600E5EE89 /* Build configuration list for PBXNativeTarget "EdenList (Upgraded)" */;
+			buildPhases = (
+				84E7E9AD0A366A7600E5EE89 /* Headers */,
+				84E7E9B20A366A7600E5EE89 /* Resources */,
+				84E7E9B70A366A7600E5EE89 /* Sources */,
+				84E7E9BC0A366A7600E5EE89 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EdenList (Upgraded)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = EdenList;
+			productReference = 84E7E9C30A366A7600E5EE89 /* EdenList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 84DF6B7D08A6DC31001034E5 /* Build configuration list for PBXProject "EdenList" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* EdenList */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A37F4C6FDCFA73011CA2CEA /* EdenList */,
+				84E7E9AC0A366A7600E5EE89 /* EdenList (Upgraded) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A37F4C9FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080E96DAFE201CDB7F000001 /* MainMenu.nib in Resources */,
+				080E96DBFE201CDB7F000001 /* MyDocument.nib in Resources */,
+				089C1661FE840EACC02AAC07 /* InfoPlist.strings in Resources */,
+				84C40BBF0625D589000C5867 /* Edenlist.icns in Resources */,
+				84E7E9D30A36702C00E5EE89 /* EdenList-icon.icns in Resources */,
+				84FF04ED0BE53DC300A62D3C /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E7E9B20A366A7600E5EE89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E7E9B30A366A7600E5EE89 /* MainMenu.nib in Resources */,
+				84E7E9B40A366A7600E5EE89 /* MyDocument.nib in Resources */,
+				84E7E9B50A366A7600E5EE89 /* InfoPlist.strings in Resources */,
+				84E7E9B60A366A7600E5EE89 /* Edenlist.icns in Resources */,
+				84E7E9D40A36702C00E5EE89 /* EdenList-icon.icns in Resources */,
+				84FF04EE0BE53DC300A62D3C /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A37F4CEFDCFA73011CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A37F4CFFDCFA73011CA2CEA /* MyDocument.m in Sources */,
+				2A37F4D0FDCFA73011CA2CEA /* main.m in Sources */,
+				844B2D170A143BBC0070BF31 /* GeneralController.m in Sources */,
+				8430C6F20C1BB0B70030ABEE /* ELTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E7E9B70A366A7600E5EE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E7E9B80A366A7600E5EE89 /* MyDocument.m in Sources */,
+				84E7E9B90A366A7600E5EE89 /* main.m in Sources */,
+				84E7E9BB0A366A7600E5EE89 /* GeneralController.m in Sources */,
+				8430C6F00C1BB0B70030ABEE /* ELTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = MyDocument.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		84FF04EC0BE53DC300A62D3C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84FF04E40BE53D9900A62D3C /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84DF6B7A08A6DC31001034E5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = EdenList_Prefix.h;
+				PRODUCT_NAME = EdenList;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		84DF6B7B08A6DC31001034E5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = EdenList_Prefix.h;
+				PRODUCT_NAME = EdenList;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		84DF6B7C08A6DC31001034E5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = EdenList_Prefix.h;
+				PRODUCT_NAME = EdenList;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		84DF6B7E08A6DC31001034E5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+			};
+			name = Development;
+		};
+		84DF6B7F08A6DC31001034E5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				OTHER_LDFLAGS_ppc = "-prebind";
+				SDKROOT = /Developer/SDKs/MacOSX10.3.9.sdk;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Deployment;
+		};
+		84DF6B8008A6DC31001034E5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Default;
+		};
+		84E7E9BF0A366A7600E5EE89 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EdenList_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-EdenList__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenList;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		84E7E9C00A366A7600E5EE89 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EdenList_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-EdenList__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenList;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		84E7E9C10A366A7600E5EE89 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EdenList_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-EdenList__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = EdenList;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84DF6B7908A6DC31001034E5 /* Build configuration list for PBXApplicationTarget "EdenList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DF6B7A08A6DC31001034E5 /* Development */,
+				84DF6B7B08A6DC31001034E5 /* Deployment */,
+				84DF6B7C08A6DC31001034E5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84DF6B7D08A6DC31001034E5 /* Build configuration list for PBXProject "EdenList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DF6B7E08A6DC31001034E5 /* Development */,
+				84DF6B7F08A6DC31001034E5 /* Deployment */,
+				84DF6B8008A6DC31001034E5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84E7E9BE0A366A7600E5EE89 /* Build configuration list for PBXNativeTarget "EdenList (Upgraded)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E7E9BF0A366A7600E5EE89 /* Development */,
+				84E7E9C00A366A7600E5EE89 /* Deployment */,
+				84E7E9C10A366A7600E5EE89 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

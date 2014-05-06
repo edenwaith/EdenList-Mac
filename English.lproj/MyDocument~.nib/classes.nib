@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = ELTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {addRecord = id; deleteAllRecords = id; deleteRecord = id; }; 
+            CLASS = MyDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                commentsTextView = id; 
+                dataTextField = NSTextField; 
+                deleteButton = NSButton; 
+                itemField = NSTextField; 
+                table = id; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}

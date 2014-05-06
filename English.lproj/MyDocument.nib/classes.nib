@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>addRecord</key>
+				<string>id</string>
+				<key>deleteAllRecords</key>
+				<string>id</string>
+				<key>deleteRecord</key>
+				<string>id</string>
+				<key>deselectAllRecords</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>MyDocument</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>commentsTextView</key>
+				<string>id</string>
+				<key>dataTextField</key>
+				<string>NSTextField</string>
+				<key>deleteButton</key>
+				<string>NSButton</string>
+				<key>itemField</key>
+				<string>NSTextField</string>
+				<key>table</key>
+				<string>id</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSDocument</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>ELTableView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSTableView</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>
