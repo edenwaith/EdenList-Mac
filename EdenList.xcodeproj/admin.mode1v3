@@ -294,11 +294,14 @@
 								<string>2A37F4ABFDCFA73011CA2CEA</string>
 								<string>2A37F4AFFDCFA73011CA2CEA</string>
 								<string>2A37F4B8FDCFA73011CA2CEA</string>
+								<string>84FF04EC0BE53DC300A62D3C</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>15</integer>
+									<integer>11</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -322,7 +325,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>18 265 1280 613 0 0 1440 878 </string>
+						<string>26 162 1280 613 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -338,7 +341,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Info-EdenList__Upgraded_.plist</string>
+								<string>InfoPlist.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -346,20 +349,20 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Info-EdenList__Upgraded_.plist</string>
+										<string>InfoPlist.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>84B3FA7919188B9300382CC7</string>
+										<string>842574DF191C726F00C04E08</string>
 										<key>history</key>
 										<array>
 											<string>84D60A9212D25C16002DC9D3</string>
 											<string>84D60A9312D25C16002DC9D3</string>
 											<string>84D60A9412D25C16002DC9D3</string>
 											<string>84D0047F191885C60097BC7B</string>
-											<string>84D00480191885C60097BC7B</string>
+											<string>842574DD191C726F00C04E08</string>
+											<string>842574DE191C726F00C04E08</string>
 											<string>84D00481191885C60097BC7B</string>
-											<string>84D0048A19188B470097BC7B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -371,14 +374,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1072, 443}}</string>
+								<string>{{0, 0}, {1072, 438}}</string>
 								<key>RubberWindowFrame</key>
-								<string>18 265 1280 613 0 0 1440 878 </string>
+								<string>26 162 1280 613 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>443pt</string>
+							<string>438pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -391,14 +394,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 448}, {1072, 124}}</string>
+								<string>{{0, 443}, {1072, 129}}</string>
 								<key>RubberWindowFrame</key>
-								<string>18 265 1280 613 0 0 1440 878 </string>
+								<string>26 162 1280 613 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>124pt</string>
+							<string>129pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -417,9 +420,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>84B3FA7A19188B9300382CC7</string>
+				<string>842574CF191C71E400C04E08</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>84B3FA7B19188B9300382CC7</string>
+				<string>842574D0191C71E400C04E08</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -538,7 +541,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>421038995.42205501</real>
+	<real>421294703.04242003</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -559,7 +562,7 @@
 		<string>/Users/admin/Programs/Mac/EdenList/EdenList.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>18 265 1280 613 0 0 1440 878 </string>
+	<string>26 162 1280 613 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -636,7 +639,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>84DC48EB104B784F00F83963</string>
-				<string>84B3FA7C19188B9300382CC7</string>
+				<string>842574D1191C71E400C04E08</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

@@ -2,7 +2,7 @@
 {
 	089C1660FE840EACC02AAC07 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 415}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 406}}";
 			sepNavSelRange = "{230, 0}";
 			sepNavVisRange = "{0, 266}";
 			sepNavVisRect = "{{0, 0}, {587, 370}}";
@@ -94,7 +94,7 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 421038989;
+			PBXPerProjectTemplateStateSaveDate = 421294437;
 			PBXWorkspaceContents = (
 				{
 					LeftSlideOut = {
@@ -298,14 +298,18 @@
 					WindowLocation = "{5, 112}";
 				},
 			);
-			PBXWorkspaceStateSaveDate = 421038989;
+			PBXWorkspaceStateSaveDate = 421294437;
 		};
 		perUserProjectItems = {
-			84B3FA7919188B9300382CC7 /* PlistBookmark */ = 84B3FA7919188B9300382CC7 /* PlistBookmark */;
+			842574CE191C71E400C04E08 /* PlistBookmark */ = 842574CE191C71E400C04E08 /* PlistBookmark */;
+			842574D4191C71FC00C04E08 /* PlistBookmark */ = 842574D4191C71FC00C04E08 /* PlistBookmark */;
+			842574DD191C726F00C04E08 /* PlistBookmark */ = 842574DD191C726F00C04E08 /* PlistBookmark */;
+			842574DE191C726F00C04E08 /* PBXTextBookmark */ = 842574DE191C726F00C04E08 /* PBXTextBookmark */;
+			842574DF191C726F00C04E08 /* PBXTextBookmark */ = 842574DF191C726F00C04E08 /* PBXTextBookmark */;
+			84B3FA7D19188BDA00382CC7 = 84B3FA7D19188BDA00382CC7 /* PlistBookmark */;
 			84D0047F191885C60097BC7B = 84D0047F191885C60097BC7B /* PBXTextBookmark */;
 			84D00480191885C60097BC7B = 84D00480191885C60097BC7B /* PBXTextBookmark */;
 			84D00481191885C60097BC7B = 84D00481191885C60097BC7B /* PBXTextBookmark */;
-			84D00482191885C60097BC7B = 84D00482191885C60097BC7B /* PlistBookmark */;
 			84D0048A19188B470097BC7B = 84D0048A19188B470097BC7B /* PlistBookmark */;
 			84D60A9212D25C16002DC9D3 = 84D60A9212D25C16002DC9D3 /* PBXTextBookmark */;
 			84D60A9312D25C16002DC9D3 = 84D60A9312D25C16002DC9D3 /* PBXTextBookmark */;
@@ -313,6 +317,8 @@
 		};
 		sourceControlManager = 84DF6B8108A6DC31001034E5 /* Source Control */;
 		userBuildSettings = {
+			OBJROOT = "/Users/admin/Programs/builds/EdenList-Mac/build";
+			SYMROOT = "/Users/admin/Programs/builds/EdenList-Mac/build";
 		};
 	};
 	2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {
@@ -351,6 +357,62 @@
 			sepNavVisRect = "{{0, 0}, {587, 370}}";
 		};
 	};
+	842574CE191C71E400C04E08 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = "/Users/admin/Programs/Mac/EdenList/Info-EdenList__Upgraded_.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	842574D4191C71FC00C04E08 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = "/Users/admin/Programs/Mac/EdenList/Info-EdenList__Upgraded_.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	842574DD191C726F00C04E08 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = "/Users/admin/Programs/Mac/EdenList/Info-EdenList__Upgraded_.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	842574DE191C726F00C04E08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 84FF04E40BE53D9900A62D3C /* English */;
+		name = "Localizable.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 117;
+		vrLoc = 0;
+	};
+	842574DF191C726F00C04E08 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C1660FE840EACC02AAC07 /* English */;
+		name = "InfoPlist.strings: 6";
+		rLen = 0;
+		rLoc = 230;
+		rType = 0;
+		vrLen = 266;
+		vrLoc = 0;
+	};
 	8430C6ED0C1BB0B70030ABEE /* ELTableView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {694, 539}}";
@@ -383,7 +445,7 @@
 			sepNavVisRect = "{{0, 792}, {587, 370}}";
 		};
 	};
-	84B3FA7919188B9300382CC7 /* PlistBookmark */ = {
+	84B3FA7D19188BDA00382CC7 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */;
 		fallbackIsa = PBXBookmark;
@@ -393,7 +455,7 @@
 		);
 		name = "/Users/admin/Programs/Mac/EdenList/Info-EdenList__Upgraded_.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	84C40BBD0625D4D6000C5867 /* EdenList */ = {
 		isa = PBXExecutable;
@@ -459,17 +521,6 @@
 		rType = 0;
 		vrLen = 266;
 		vrLoc = 0;
-	};
-	84D00482191885C60097BC7B /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 84E7E9C20A366A7600E5EE89 /* Info-EdenList__Upgraded_.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/admin/Programs/Mac/EdenList/Info-EdenList__Upgraded_.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	84D0048A19188B470097BC7B /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -573,7 +624,7 @@
 	};
 	84FF04E40BE53D9900A62D3C /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 415}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 406}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 117}";
 			sepNavVisRect = "{{0, 0}, {587, 370}}";

@@ -16,8 +16,8 @@
 {
 	IBOutlet	NSTextField 	*itemField;
 
-	IBOutlet id	commentsTextView;
-	IBOutlet id	table;
+	IBOutlet	id				commentsTextView;
+	IBOutlet	id				table;
 	IBOutlet	NSTextField		*dataTextField;
 	IBOutlet	NSButton		*deleteButton;
 	
