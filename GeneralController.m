@@ -3,7 +3,7 @@
 //  EdenList
 //
 //  Created by Chad Armstrong on Thu May 11 2006.
-//  Copyright (c) 2003 - 2007 Edenwaith. All rights reserved.
+//  Copyright (c) 2003 - 2014 Edenwaith. All rights reserved.
 //
 
 #import "GeneralController.h"
@@ -13,31 +13,31 @@
 // =========================================================================
 // (IBAction) checkForNewVersion : (id)sender
 // -------------------------------------------------------------------------
+// Check to see if a newer version of the application exists
+// -------------------------------------------------------------------------
 // Created: 16 May 2006
 // Version: 16 May 2006
-// -------------------------------------------------------------------------
-// 
 // =========================================================================
 - (IBAction) checkForNewVersion: (id) sender
 {
+	NSString *applicationName = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleName"];
 	NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/version.xml"]];
+    NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/xml/version.xml"]];
     NSString *latestVersionNumber = [productVersionDict valueForKey:@"EdenList"];
     int button = 0;
 
     if ( latestVersionNumber == nil )
     {
         NSBeep();
-        NSRunAlertPanel(@"Could not check for update", @"A problem arose while attempting to check for a new version of EdenList.  Edenwaith.com may be temporarily unavailable or your network may be down.", @"OK", nil, nil);
+		NSRunAlertPanel(NSLocalizedString(@"UpdateFailureTitle", nil), NSLocalizedString(@"UpdateFailureMsg", nil), NSLocalizedString(@"OK", nil), nil, nil, applicationName);
     }
     else if ( [latestVersionNumber isEqualTo: currentVersionNumber] )
     {
-        NSRunAlertPanel(@"Software is Up-To-Date", @"You have the most recent version of EdenList.", @"OK", nil, nil);
+        NSRunAlertPanel(NSLocalizedString(@"SoftwareUpToDate", nil), NSLocalizedString(@"RecentVersionMsg", nil), NSLocalizedString(@"OK", nil), nil, nil, applicationName);
     }
     else
     {
-		NSLog(@"currentVersionNumber: %@", currentVersionNumber);
-        button = NSRunAlertPanel(@"New Version is Available", @"Version %@ of EdenList is available.", @"Download", @"Cancel", @"More Info", latestVersionNumber);
+        button = NSRunAlertPanel(NSLocalizedString(@"NewVersionAvailableTitle", nil), NSLocalizedString(@"NewVersionAvailableMsg", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"MoreInfo", nil), latestVersionNumber, applicationName);
         
         if (NSOKButton == button) // Download
         {
@@ -47,7 +47,6 @@
         {
             [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/edenlist/index.php"]];
         }
-        
     }
 }
 
@@ -55,10 +54,10 @@
 // =========================================================================
 // (IBAction) goToProductPage : (id)sender
 // -------------------------------------------------------------------------
+// Go to the product's web page
+// -------------------------------------------------------------------------
 // Created: 16 May 2006
 // Version: 16 May 2006
-// -------------------------------------------------------------------------
-// 
 // =========================================================================
 - (IBAction) goToProductPage : (id) sender
 {
@@ -69,10 +68,10 @@
 // =========================================================================
 // (IBAction) sendFeedback : (id)sender
 // -------------------------------------------------------------------------
+// Send a support e-mail
+// -------------------------------------------------------------------------
 // Created: 16 May 2006
 // Version: 16 May 2006
-// -------------------------------------------------------------------------
-// 
 // =========================================================================
 - (IBAction) sendFeedback: (id) sender
 {

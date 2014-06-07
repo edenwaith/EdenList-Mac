@@ -4,7 +4,7 @@
 //  EdenList
 //
 //  Created by Chad Armstrong on Thu May 11 2006.
-//  Copyright (c) 2006 Edenwaith. All rights reserved.
+//  Copyright (c) 2003 - 2014 Edenwaith. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -86,10 +86,6 @@
 		2A37F4CFFDCFA73011CA2CEA /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		2A37F4D0FDCFA73011CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		32DBCF760370BD2300C91783 /* EdenList_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* EdenList_Prefix.h */; };
-		8430C6EF0C1BB0B70030ABEE /* ELTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8430C6ED0C1BB0B70030ABEE /* ELTableView.h */; };
-		8430C6F00C1BB0B70030ABEE /* ELTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C6EE0C1BB0B70030ABEE /* ELTableView.m */; };
-		8430C6F10C1BB0B70030ABEE /* ELTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8430C6ED0C1BB0B70030ABEE /* ELTableView.h */; };
-		8430C6F20C1BB0B70030ABEE /* ELTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C6EE0C1BB0B70030ABEE /* ELTableView.m */; };
 		844B2D160A143BBC0070BF31 /* GeneralController.h in Headers */ = {isa = PBXBuildFile; fileRef = 844B2D140A143BBC0070BF31 /* GeneralController.h */; };
 		844B2D170A143BBC0070BF31 /* GeneralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B2D150A143BBC0070BF31 /* GeneralController.m */; };
 		84C40BBF0625D589000C5867 /* Edenlist.icns in Resources */ = {isa = PBXBuildFile; fileRef = 84C40BBE0625D589000C5867 /* Edenlist.icns */; };
@@ -122,8 +118,6 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* EdenList_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdenList_Prefix.h; sourceTree = "<group>"; };
-		8430C6ED0C1BB0B70030ABEE /* ELTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ELTableView.h; sourceTree = "<group>"; };
-		8430C6EE0C1BB0B70030ABEE /* ELTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ELTableView.m; sourceTree = "<group>"; };
 		844B2D140A143BBC0070BF31 /* GeneralController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GeneralController.h; sourceTree = "<group>"; };
 		844B2D150A143BBC0070BF31 /* GeneralController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GeneralController.m; sourceTree = "<group>"; };
 		84C40BBE0625D589000C5867 /* Edenlist.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Edenlist.icns; sourceTree = "<group>"; };
@@ -194,8 +188,6 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8430C6ED0C1BB0B70030ABEE /* ELTableView.h */,
-				8430C6EE0C1BB0B70030ABEE /* ELTableView.m */,
 				844B2D140A143BBC0070BF31 /* GeneralController.h */,
 				844B2D150A143BBC0070BF31 /* GeneralController.m */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
@@ -246,7 +238,6 @@
 				32DBCF760370BD2300C91783 /* EdenList_Prefix.h in Headers */,
 				2A37F4C8FDCFA73011CA2CEA /* MyDocument.h in Headers */,
 				844B2D160A143BBC0070BF31 /* GeneralController.h in Headers */,
-				8430C6F10C1BB0B70030ABEE /* ELTableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +248,6 @@
 				84E7E9AE0A366A7600E5EE89 /* EdenList_Prefix.h in Headers */,
 				84E7E9AF0A366A7600E5EE89 /* MyDocument.h in Headers */,
 				84E7E9B10A366A7600E5EE89 /* GeneralController.h in Headers */,
-				8430C6EF0C1BB0B70030ABEE /* ELTableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +335,6 @@
 				2A37F4CFFDCFA73011CA2CEA /* MyDocument.m in Sources */,
 				2A37F4D0FDCFA73011CA2CEA /* main.m in Sources */,
 				844B2D170A143BBC0070BF31 /* GeneralController.m in Sources */,
-				8430C6F20C1BB0B70030ABEE /* ELTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +345,6 @@
 				84E7E9B80A366A7600E5EE89 /* MyDocument.m in Sources */,
 				84E7E9B90A366A7600E5EE89 /* main.m in Sources */,
 				84E7E9BB0A366A7600E5EE89 /* GeneralController.m in Sources */,
-				8430C6F00C1BB0B70030ABEE /* ELTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
