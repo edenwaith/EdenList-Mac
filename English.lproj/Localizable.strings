@@ -1,6 +1,5 @@
-"AlertTitle" = "Alert";
+"AlertTitle" = "Warning";
 "Cancel" = "Cancel";
-
 "DeleteAllMsg" = "This will delete all records.  Proceed?";
 "Download" = "Download";
 "MoreInfo" = "More Info";

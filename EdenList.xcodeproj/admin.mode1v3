@@ -239,7 +239,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>840F14441942AFCA00A2528F</string>
+						<string>840F14671942BE2600A2528F</string>
 						<key>history</key>
 						<array>
 							<string>84A6E8C7193C268C00F3F589</string>
@@ -340,8 +340,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>9</integer>
+									<integer>5</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -395,18 +395,19 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>840F14411942AFCA00A2528F</string>
+										<string>840F14661942BE2600A2528F</string>
 										<key>history</key>
 										<array>
 											<string>84D60A9412D25C16002DC9D3</string>
 											<string>842574E0191C75EA00C04E08</string>
 											<string>84A6E8AA193C22F100F3F589</string>
-											<string>84A6E8AB193C22F100F3F589</string>
 											<string>84A6E8AC193C22F100F3F589</string>
 											<string>84A6E8AD193C22F100F3F589</string>
 											<string>84A6E8AE193C22F100F3F589</string>
-											<string>840F143F1942AFCA00A2528F</string>
-											<string>840F14401942AFCA00A2528F</string>
+											<string>840F14561942BBE800A2528F</string>
+											<string>840F145F1942BD0C00A2528F</string>
+											<string>840F14601942BD0C00A2528F</string>
+											<string>840F14621942BD0C00A2528F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -418,14 +419,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1072, 428}}</string>
+								<string>{{0, 0}, {1072, 567}}</string>
 								<key>RubberWindowFrame</key>
 								<string>19 172 1280 613 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>428pt</string>
+							<string>567pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -438,14 +439,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 433}, {1072, 139}}</string>
+								<string>{{0, 572}, {1072, 0}}</string>
 								<key>RubberWindowFrame</key>
 								<string>19 172 1280 613 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>139pt</string>
+							<string>0pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -585,7 +586,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>423800778.526779</real>
+	<real>423804454.44579703</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -602,14 +603,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>840F144F1942AFCA00A2528F</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>840F14501942AFCA00A2528F</string>
 		<string>840F14511942AFCA00A2528F</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84DC48EB104B784F00F83963</string>
 		<string>84A6E8B2193C22F100F3F589</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/admin/Programs/Mac/EdenList/EdenList.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -918,7 +918,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

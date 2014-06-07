@@ -3,12 +3,15 @@
 //  EdenList
 //
 //  Created by Chad Armstrong on Thu Apr 08 2004.
-//  Copyright (c) 2003 - 2007 Edenwaith. All rights reserved.
+//  Copyright (c) 2003 - 2014 Edenwaith. All rights reserved.
 //
-//  REFERENCES
+//  TABLE VIEW REFERENCES
 //  http://www.macdevcenter.com/pub/a/mac/2001/08/10/cocoa.html?page=4
-//  http://developer.apple.com/techpubs/macosx/Cocoa/Reference/ApplicationKit/ObjC_classic/Protocols/NSTableDataSource.html#//apple_ref/occ/instm/NSObject/tableView:objectValueForTableColumn:row:
-//  http://cocoa.mamasam.com/COCOADEV/2002/04/1/31132.php
+//  http://www.nongnu.org/gstutorial/en/ch13s02.html
+//  http://www.nongnu.org/gstutorial/en/ch13s03.html
+//  http://rixstep.com/2/20050827,00.shtml
+//  http://cocoatravels.blogspot.com/2005_11_01_archive.html
+
 
 #import "MyDocument.h"
 
@@ -18,18 +21,17 @@
 // =========================================================================
 // (id) init
 // -------------------------------------------------------------------------
-// 
-// -------------------------------------------------------------------------
 // Version: 7 June 2007
 // =========================================================================
 - (id)init
 {
     self = [super init];
+	
     if (self)
 	{
         // Add your subclass-specific initialization here.
         // If an error occurs here, send a [self release] message and return nil.
-		data_dict = [[NSMutableDictionary alloc] init];
+		dataDict = [[NSMutableDictionary alloc] init];
     
     }
 	
@@ -40,27 +42,23 @@
 // =========================================================================
 // (void) dealloc
 // -------------------------------------------------------------------------
-// 
-// -------------------------------------------------------------------------
-// =========================================================================
 // Created: 1 May 2007 20:28
 // Version: 19 June 2007 20:50
+// =========================================================================
 - (void) dealloc
 {
 	[[NSNotificationCenter defaultCenter] 
 		removeObserver: self 
 		name: NSTextDidEndEditingNotification 
 		object: commentsTextView];
-  
+	[dataDict release];
+	
 	[super dealloc];
 }
 
 
 // =========================================================================
 // (NSString *) windowNibName
-// -------------------------------------------------------------------------
-// 
-// -------------------------------------------------------------------------
 // =========================================================================
 - (NSString *)windowNibName
 {
@@ -77,126 +75,47 @@
 // =========================================================================
 // (void) windowControllerDidLoadNib: (NSWindowController *)
 // -------------------------------------------------------------------------
-// http://www.nongnu.org/gstutorial/en/ch13s02.html
-// -------------------------------------------------------------------------
 // Version: 19 June 2007 20:50
 // =========================================================================
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
-{
-//	NSTableColumn *column;
-//	NSArray *columns = [table tableColumns];
-	
+{	
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
 
 	[table registerForDraggedTypes: [NSArray arrayWithObject: kELTableDataType] ];
-	
-	// [[self window] makeFirstResponder: dataTextField];
-/*	
-	// This code might be able to be removed
-	column = [columns objectAtIndex: 0];
-	//[column setWidth: 100];
-	[column setEditable: YES];
-	[column setResizable:YES];
-	[column setIdentifier:@"CheckBox"];
-	[[column headerCell] setStringValue: @""];
-	
-	column = [columns objectAtIndex: 1];
-	// [column setWidth: 100];
-	[column setEditable: YES];
-	[column setResizable:YES];
-	[column setIdentifier:@"ToDo"];
-	[[column headerCell] setStringValue: @"To Do"];
-*/
-//textDidBeginEditing:
-//textDidChange:
-//textDidEndEditing:
-//textShouldBeginEditing:
-//textShouldEndEditing:
+
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 		selector:@selector(textDidChange:) 
-		name:NSTextDidEndEditingNotification // NSTextDidChangeNotification 
-		object:commentsTextView]; // commentsTextView
-
+		name:NSTextDidEndEditingNotification 
+		object:commentsTextView];
 }
 
 
-// =========================================================================
-// (NSData *) dataRepresentationOfType: (NSString *)
-// -------------------------------------------------------------------------
-// writeToFile is used instead of this method
-// -------------------------------------------------------------------------
-// Page on saving and loading data: http://www.nongnu.org/gstutorial/en/ch13s03.html
-// http://rixstep.com/2/20050827,00.shtml
-// http://www.samspublishing.com/articles/article.asp?p=32078&seqNum=2&rl=1
-// =========================================================================
-//- (NSData *)dataRepresentationOfType:(NSString *)aType
-//{
-//    // Insert code here to write your document from the given data.  You can also choose to override -fileWrapperRepresentationOfType: or -writeToFile:ofType: instead.
-//    // return nil;
-//
-//	return [NSArchiver archivedDataWithRootObject: records];
-//	// return [[records description] dataUsingEncoding: [NSString defaultCStringEncoding]];
-//}
-
-
-// =========================================================================
-// (BOOL) loadDataRepresentation:
-// -------------------------------------------------------------------------
-// readFromFile is used instead of this method.
-// -------------------------------------------------------------------------
-// =========================================================================
-//- (BOOL)loadDataRepresentation:(NSData *)data ofType:(NSString *)aType
-//{
-//    // Insert code here to read your document from the given data.  You can also choose to override -loadFileWrapperRepresentation:ofType: or -readFromFile:ofType: instead.
-//    // return YES;
-//	NSLog(@"Type: %@", aType);
-//   	NSLog(@"Version: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleVersionString"]);
-//	
-//	if ([aType isEqualToString: @"DocumentType"])
-//	{
-//		
-//		records = [[NSMutableArray alloc] init];
-//        [records setArray: [NSUnarchiver unarchiveObjectWithData: data]];
-//		[table reloadData];
-//        return YES;
-//	}
-//	else
-//	{
-//		return NO; 
-//	}
-//
-//}
-
+#pragma mark -
+#pragma mark Read + Write to file 
 
 // =========================================================================
 // (BOOL) writeToFile: (NSString *) ofType: (NSString *)
 // -------------------------------------------------------------------------
-// 
-// -------------------------------------------------------------------------
 // Created: 6 June 2007
-// Version: 12 May 2010 22:00
+// Version: 6 June 2014 22:15
 // =========================================================================
 - (BOOL) writeToFile: (NSString *) fileName ofType:(NSString *)aType
 {
-	data_dict = [[NSMutableDictionary dictionary] retain];
-//	[data_dict setObject:[NSArchiver archivedDataWithRootObject: [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleVersionString"]] forKey:@"Version"];
-//	[data_dict setObject:[NSArchiver archivedDataWithRootObject: records] forKey:@"Records"];
+	dataDict = [[NSMutableDictionary dictionary] retain];
 
-	[data_dict setObject: [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleVersionString"] forKey: @"Version"];
-	[data_dict setObject: records forKey: @"Records"];
+	[dataDict setObject: [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleVersionString"] forKey: kVersionKey];
+	[dataDict setObject: records forKey: kRecordsKey];
 	
-	return [data_dict writeToFile:fileName atomically:YES];
+	return [dataDict writeToFile:fileName atomically:YES];
 }
 
 
 // =========================================================================
 // (BOOL) readFromFile: (NSString *) ofType: (NSString *)
 // -------------------------------------------------------------------------
-// 
-// -------------------------------------------------------------------------
 // Created: 6 June 2007
-// Version: 11 May 2010 22:20
+// Version: 6 June 2014 22:16
 // =========================================================================
 - (BOOL) readFromFile: (NSString *) fileName ofType: (NSString *) aType
 {
@@ -204,15 +123,12 @@
 	{
 		records = [[NSMutableArray alloc] init];
 		
-		data_dict = [[NSMutableDictionary dictionaryWithContentsOfFile:fileName] retain];
+		dataDict = [[NSMutableDictionary dictionaryWithContentsOfFile:fileName] retain];
 		
-		if (data_dict)
+		if (dataDict != nil)
 		{
-//			NSData *versionString = [data_dict objectForKey:@"Version"];
-//			NSData *recordsData = [data_dict objectForKey:@"Records"];
-
-			id versionString = [data_dict objectForKey: @"Version"];
-			id recordsData = [data_dict objectForKey:@"Records"];
+			id versionString = [dataDict objectForKey: kVersionKey];
+			id recordsData = [dataDict objectForKey: kRecordsKey];
 			
 			// Read in from older (pre 1.0) versions of EdenList files
 			if (versionString != nil && [versionString isKindOfClass: [NSData class]])
@@ -240,6 +156,7 @@
 		}
 		
 		[table reloadData];
+		
         return YES;
 	}
 	else
@@ -250,10 +167,11 @@
 }
 
 
+#pragma mark -
+#pragma mark Manage records
 
 // =========================================================================
 // (NSDictionary *) createRecord
-// -------------------------------------------------------------------------
 // -------------------------------------------------------------------------
 // Created: 21 April 2007 0:06
 // Version: 12 May 2010 9:43
@@ -262,11 +180,9 @@
 {
 	NSMutableDictionary *record = [[NSMutableDictionary alloc] init];
     
-	[record setObject:[NSNumber numberWithInt: 0] forKey:@"CheckBox"];
-    [record setObject:[itemField stringValue] forKey:@"ToDo"];
+	[record setObject:[NSNumber numberWithInt: 0] forKey:kCheckBoxKey];
+    [record setObject:[itemField stringValue] forKey:kToDoKey];
 	[record setObject:@"" forKey: kNotesKey];
-	
-//	[record setObject:@"" forKey:@"Comments"];
     
     [record autorelease];
     return record;
@@ -312,7 +228,6 @@
 // =========================================================================
 // (IBAction) deleteRecord:(id)sender
 // -------------------------------------------------------------------------
-// -------------------------------------------------------------------------
 // Created: 19 May 2006 21:00
 // Version: 6 May 2007 23:00
 // =========================================================================
@@ -328,6 +243,10 @@
     {
         NSBeep();    
     }
+	else if ([table numberOfSelectedRows] == [records count])
+	{
+		[self deleteAllRecords:sender];
+	}
     else 
     {
         enumerator = [table selectedRowEnumerator];
@@ -352,25 +271,18 @@
 // (IBAction) deleteAllRecords: (id) sender
 // -------------------------------------------------------------------------
 // Created: 19 May 2006 21:00
-// Version: 6 May 2007 23:00
+// Version: 6 June 2014 21:37
 // =========================================================================
 - (IBAction) deleteAllRecords: (id) sender
 {
-    int num = [records count];
-    int i = 0;
-    int status;
+    int status = -1;
     
     NSBeep();
     status = NSRunAlertPanel(NSLocalizedString(@"AlertTitle", nil), NSLocalizedString(@"DeleteAllMsg", nil), NSLocalizedString(@"OK", nil), NSLocalizedString(@"Cancel", nil), nil);
     
     if (status == NSAlertDefaultReturn)
     {
-    
-        for (i = num - 1; i >= 0; i--)
-        {
-            [records removeObjectAtIndex:i];
-        }
-    
+		[records removeAllObjects];    
     }
 
 	[self updateChangeCount:NSChangeDone];
@@ -398,7 +310,6 @@
 
 // =========================================================================
 // (int)numberOfRowsInTableView:(NSTableView*)table
-// -------------------------------------------------------------------------
 // =========================================================================
 - (int)numberOfRowsInTableView:(NSTableView*)table
 {
@@ -408,7 +319,7 @@
 
 
 // =========================================================================
-// (void) tableView: 
+// (void) tableView:objectValueForTableColumn:row
 // -------------------------------------------------------------------------
 // this message is called for each row of the table
 // =========================================================================
@@ -425,7 +336,7 @@
 
 
 // =========================================================================
-// (void) tableView: 
+// (void) tableView:setObjectValue:forTableColumn:row:
 // -------------------------------------------------------------------------
 // Version: 6 May 2007 23:00
 // =========================================================================
@@ -437,7 +348,6 @@
     theRecord = [records objectAtIndex:rowIndex];
     [theRecord setObject:object forKey:[col identifier]];
 	[self updateChangeCount:NSChangeDone];
-    return;
 }
 
 
@@ -467,11 +377,8 @@
 			if (theValue == nil)
 			{
 				// Older versions had a Comments key instead of Notes
-				theValue = [theRecord valueForKey: @"Comments"];
+				theValue = [theRecord valueForKey: kCommentsKey];
 			}
-
-			// NSLog(@"i: %d theValue: %@", [table selectedRow], theValue);
-			// NSLog(@"theObject's value: %@", [theObject identifier]);
 			
 			if (theValue != nil)
 			{
@@ -500,9 +407,7 @@
 
 
 // =========================================================================
-// (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(int)row proposedDropOperation:(NSTableViewDropOperation)op
-// -------------------------------------------------------------------------
-// http://developer.apple.com/documentation/Cocoa/Conceptual/DragandDrop/UsingDragAndDrop.html#//apple_ref/doc/uid/20000726-BABFIDAB
+// (NSDragOperation)tableView:validateDrop:proposedRow:proposedDropOperation:
 // -------------------------------------------------------------------------
 // Created: 8 July 2009 7:24
 // Version: 8 July 2009 7:24
@@ -511,31 +416,11 @@
 {
     // Add code here to validate the drop
     return NSDragOperationEvery;
-	
-/*
- NSDragOperation	result = NSDragOperationNone;
- 
- // Add code here to validate the drop, return NSDragOperationNone is not allowed
- 
- if (tv == mProfileList) {
- 
- NSPasteboard* pboard = [info draggingPasteboard];
- if (pboard != NULL) {
- NSData* rowData = [pboard dataForType: kProfileTableEntryDataType];
- if (rowData != NULL) {
- result = NSDragOperationEvery;
- }
- }
- 
- }
- 
- return result; 
- */
 }
 
 
 // =========================================================================
-// - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
+// - (BOOL)tableView:writeRowsWithIndexes:toPasteboard:
 // -------------------------------------------------------------------------
 // 
 // -------------------------------------------------------------------------
@@ -544,38 +429,17 @@
 // =========================================================================
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
-	
 	 // Copy the row numbers to the pasteboard.
 	 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
 	 [pboard declareTypes:[NSArray arrayWithObject:kELTableDataType] owner:self];
 	 [pboard setData:data forType: kELTableDataType];
-	 return YES; 
-	 
 	
-/*	
-	BOOL	result = NO;
-	NSData*	data = NULL;
-	
-	if (tv == mProfileList) {
-		
-		data = [NSKeyedArchiver archivedDataWithRootObject: rowIndexes];
-		if (data != NULL) {
-			
-			[pboard declareTypes: [NSArray arrayWithObject: kProfileTableEntryDataType] owner: self];
-			[pboard setData: data forType: kProfileTableEntryDataType];
-			
-			result = YES;
-		}
-	}
-	
-	return result;
- */
-	
+	 return YES;
 }
 
 
 // =========================================================================
-// (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id <NSDraggingInfo>)info row:(int)row dropOperation:(NSTableViewDropOperation)operation
+// (BOOL)tableView:acceptDrop:row:dropOperation:
 // -------------------------------------------------------------------------
 // 
 // -------------------------------------------------------------------------
@@ -587,7 +451,6 @@
     NSPasteboard* pboard = [info draggingPasteboard];
     NSData* rowData = [pboard dataForType: kELTableDataType];
     NSIndexSet* rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:rowData];
-//    int dragRow = [rowIndexes firstIndex];
 	
 	int		insertionRow;
 	int		newIndex;
@@ -602,8 +465,7 @@
 		
 		//	the row number for insertion is before we removed the dragged items, if the insertion is below the removal
 		//	we need to adjust the insertion row. We also need to honor the drag operation
-		
-		//	ddwr - this code will not work for non-contiguous selection of table rows
+		//	Note: this code will not work for non-contiguous selection of table rows
 		
 		insertionRow = row;
 		firstDragRowIndex = [rowIndexes firstIndex];
@@ -630,15 +492,12 @@
 		}
 		
 		[table deselectAll:self];
-//		[table selectRowIndexes:insertionIndexSet byExtendingSelection:YES];	// select row(s) at new location
 		[self updateChangeCount:NSChangeDone];
 		[table reloadData];
 	
 	}
-    // Move the specified row to its new location...
 	
 	return YES;
-
 }
 
 
@@ -646,7 +505,6 @@
 // (void)tableView:(NSTableView *)aTableView sortDescriptorsDidChange:(NSArray *)oldDescriptors
 // -------------------------------------------------------------------------
 // This needs to be added to be able to sort a table
-// http://cocoatravels.blogspot.com/2005_11_01_archive.html
 // -------------------------------------------------------------------------
 // Created: 9 September 2007 16:42
 // Version: 9 September 2007 16:42
@@ -658,6 +516,10 @@
 	 [self updateChangeCount:NSChangeDone];
 	 [aTableView reloadData];
 }
+
+
+#pragma mark -
+#pragma mark - NSTextView Delegate Method
 
 // =========================================================================
 // (void) textDidChange: (NSNotification *) aNotification
@@ -675,21 +537,18 @@
 	{
 		int rowIndex = [table selectedRow];
 		
-//		NSParameterAssert(rowIndex >= 0 && rowIndex < [records count]);
-		
 		NSMutableDictionary *theRecord = [records objectAtIndex:rowIndex];
 		NSString *obj = [[NSString alloc] initWithString: [commentsTextView string]];
-		// [theRecord setObject:obj forKey:@"Comments"];
 		[theRecord setObject:obj forKey: kNotesKey];
 		
 		[records replaceObjectAtIndex:rowIndex withObject:theRecord];
-
 	}
 }
 
 
 #pragma mark -
 #pragma mark Printing
+
 // =========================================================================
 // (NSPrintOperation *)printOperationWithSettings:(NSDictionary *) printSettings error:(NSError **)outError
 // -------------------------------------------------------------------------
@@ -702,8 +561,6 @@
 {
     NSPrintInfo *printInfo = [NSPrintInfo sharedPrintInfo];
 	
-    // Get the window from the first window controller (presumably	the document has only one window)
-//    NSWindow *window = [[[self windowControllers] objectAtIndex: 0] window];
     NSTableView *printableView = table; // [window contentView];
 	[printableView setUsesAlternatingRowBackgroundColors: NO];
 	
@@ -714,14 +571,5 @@
 	
     return printJob;
 }
-
-//- (void) printShowingPrintPanel: (BOOL) flag
-//{
-//	NSPrintInfo *printInfo = [self printInfo];
-//	NSPrintOperation *printOp;
-//	printOp = [NSPrintOperation printOperationWithView: [table contentView] printInfo: printInfo];
-//	[printOp setShowPanels: flag];
-//	[printOp runOperation];
-//}
 
 @end

@@ -3,42 +3,42 @@
 //  EdenList
 //
 //  Created by Chad Armstrong on Thu Apr 08 2004.
-//  Copyright (c) 2003 - 2007 Edenwaith. All rights reserved.
+//  Copyright (c) 2003 - 2014 Edenwaith. All rights reserved.
 //
 
 
 #import <Cocoa/Cocoa.h>
 
 #define kELTableDataType @"ELTableDataType"
-#define kNotesKey	@"Notes"
+#define kVersionKey		 @"Version"
+#define kRecordsKey		 @"Records"
+#define kNotesKey		 @"Notes"
+#define kCommentsKey	 @"Comments"
+#define kToDoKey		 @"ToDo"
+#define kCheckBoxKey	 @"CheckBox"
 
 @interface MyDocument : NSDocument
 {
-	IBOutlet	NSTextField 	*itemField;
-
-	IBOutlet	id				commentsTextView;
-	IBOutlet	id				table;
+	IBOutlet	NSTableView		*table;	// Set to NSTableView
+	IBOutlet	NSTextView		*commentsTextView; // Set to NSTextView
+	IBOutlet	NSTextField 	*itemField; // is itemField or dataTextField not used?
 	IBOutlet	NSTextField		*dataTextField;
 	IBOutlet	NSButton		*deleteButton;
 	
-	NSData		*tableData;
+	NSData						*tableData;
 	
-	NSMutableDictionary *data_dict;
-	NSMutableArray  	*records; // rename to records
-	NSString 			*recordsFile;
+	NSMutableDictionary			*dataDict;	// What is this used for?
+	NSMutableArray				*records;
+	NSString					*recordsFile;
 }
-
-// Prototypes
-
-// - (BOOL) readFromFile: (NSString *) fileName ofType: (NSString *) aType;
 
 - (IBAction) addRecord: (id)sender;
 - (IBAction) deleteRecord: (id)sender;
 - (IBAction) deleteAllRecords: (id) sender;
 - (IBAction) deselectAllRecords: (id) sender;
+
 - (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(int)row proposedDropOperation:(NSTableViewDropOperation)op;
 - (void) tableView:(NSTableView *)aTableView sortDescriptorsDidChange:(NSArray *)oldDescriptors;
 - (NSPrintOperation *)printOperationWithSettings:(NSDictionary *) printSettings error:(NSError **)outError;
-//- (void) printShowingPrintPanel: (BOOL) flag;
 
 @end
