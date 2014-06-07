@@ -1,0 +1,13 @@
+"AlertTitle" = "Warning";
+"Cancel" = "Cancel";
+"DeleteAllMsg" = "This will delete all records.  Proceed?";
+"Download" = "Download";
+"MoreInfo" = "More Info";
+"NewVersionAvailableTitle" = "New version is available";
+"NewVersionAvailableMsg" = "Version %@ of %@ is available.";
+"OK" = "OK";
+"RecentVersionMsg" = "You have the most recent version of %@.";
+"SoftwareUpToDate" = "Software is Up-To-Date";
+"Update" = "Update";
+"UpdateFailureTitle" = "Could not check for update";
+"UpdateFailureMsg" = "A problem arose while attempting to check for a new version of %@.  Edenwaith.com may be temporarily unavailable or your network may be down.";

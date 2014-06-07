@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Records</key>
+	<array>
+		<dict>
+			<key>CheckBox</key>
+			<true/>
+			<key>Notes</key>
+			<string></string>
+			<key>ToDo</key>
+			<string>9</string>
+		</dict>
+		<dict>
+			<key>CheckBox</key>
+			<true/>
+			<key>Notes</key>
+			<string>1931</string>
+			<key>ToDo</key>
+			<string>Dracula</string>
+		</dict>
+	</array>
+	<key>Version</key>
+	<string>1.0</string>
+</dict>
+</plist>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>edenlist</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>EdenList-icon.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>DocumentType</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>edenlist</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>MyDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>EdenList</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.1.0, Copyright © 2003 - 2014 Edenwaith.</string>
+	<key>CFBundleIconFile</key>
+	<string>Edenlist</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.edenwaith.edenlist</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>EdenList</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.0</string>
+	<key>CFBundleVersion</key>
+	<string>7</string>
+	<key>CFBundleVersionString</key>
+	<string>1.1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
